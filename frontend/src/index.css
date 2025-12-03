@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Define your Luxury Color Palette here */
+  --luxury-cream: #FFF8E7;
+  --luxury-black: #1A1A1A;
+  --luxury-gold: #D4AF37;
+  --luxury-dark-gold: #AA8C2C;
+  --luxury-gray: #2D2D2D;
+}
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--luxury-cream);
+    color: var(--luxury-black);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  /* Creating the classes manually since we aren't using tailwind.config.js */
+  
+  /* Backgrounds */
+  .bg-luxury-cream { background-color: var(--luxury-cream); }
+  .bg-luxury-black { background-color: var(--luxury-black); }
+  .bg-luxury-gold { background-color: var(--luxury-gold); }
+  .bg-luxury-darkGold { background-color: var(--luxury-dark-gold); }
+  
+  /* Text Colors */
+  .text-luxury-black { color: var(--luxury-black); }
+  .text-luxury-gold { color: var(--luxury-gold); }
+  .text-luxury-cream { color: var(--luxury-cream); }
+  
+  /* Borders */
+  .border-luxury-gold { border-color: var(--luxury-gold); }
+  .border-luxury-black { border-color: var(--luxury-black); }
+  
+  /* SVG Fills */
+  .fill-luxury-gold { fill: var(--luxury-gold); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
