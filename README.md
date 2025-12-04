@@ -1,95 +1,8 @@
-# ÉLÉGANCE - Luxury Perfume E-Commerce Website
+# 🌟 Scent & Soul - Luxury Perfumes
 
-A full-stack luxury perfume e-commerce application built with React, Node.js, Express, and MongoDB.
+A full-stack luxury perfume e-commerce website built with React (Vite), Node.js, Express, and MongoDB.
 
-## 🌟 Features Implemented
-
-### Homepage
-- ✅ **Responsive Navbar** with scroll-based styling changes
-- ✅ **Eye-catching Hero Banner** with call-to-action buttons
-- ✅ **Product Cards** (4-8 displayed) with:
-  - Product images with hover effects
-  - Product name, description, and price
-  - Rating display
-  - New arrival badges
-  - Discount badges
-  - Interactive hover animations
-  - Quick add to cart button
-  - Wishlist functionality
-- ✅ **Hover Effects** on all interactive elements
-- ✅ **Card Redirection** to detailed product pages
-- ✅ **Trust Indicators** section
-- ✅ **Newsletter Subscription** section
-
-### Product Detail Page
-- ✅ **Full Product Information**:
-  - Multiple image gallery with thumbnails
-  - Product name, brand, and category
-  - Detailed description
-  - Price with original price comparison
-  - Available sizes selection
-  - Quantity selector
-  - Product type and gender information
-- ✅ **Reviews Section**:
-  - Display all customer reviews
-  - Star ratings for each review
-  - Review submission form with validation
-  - Real-time review updates
-- ✅ **Image Gallery** with thumbnail navigation
-- ✅ **Share Button** with multiple platform options:
-  - Facebook
-  - Twitter
-  - WhatsApp
-  - Copy link to clipboard
-- ✅ **Additional Features**:
-  - Wishlist toggle
-  - Add to cart functionality
-  - Trust badges (Free Shipping, Authentic, Easy Returns)
-  - Breadcrumb navigation
-
-### Collections Page
-- ✅ **Product Filtering**:
-  - Category filter
-  - Gender filter
-  - Price range filter with slider
-- ✅ **Sorting Options**:
-  - Featured
-  - Price: Low to High
-  - Price: High to Low
-  - Name: A to Z
-  - Highest Rated
-- ✅ **Active Filters Display**
-- ✅ **Clear Filters** option
-- ✅ **Product Count** display
-- ✅ **Responsive Grid Layout**
-
-## 🎨 UI/UX Enhancements
-
-### Visual Design
-- Modern luxury aesthetic with gold accents
-- Smooth animations and transitions
-- Glassmorphism effects
-- Gradient backgrounds
-- Custom scrollbar styling
-- Hover glow effects
-
-### Animations
-- Fade-in animations for content
-- Slide-in animations for elements
-- Scale animations for cards
-- Float animations for decorative elements
-- Staggered animation delays
-- Ripple effects on buttons
-
-### Interactive Elements
-- Card hover transformations
-- Image zoom on hover
-- Button hover states with color transitions
-- Loading states with spinners
-- Toast notifications (alerts)
-- Dropdown menus with smooth transitions
-
-## 🛠️ Technical Stack
+## ✨ Features
 
 ### Frontend
 - **React 19.2.0** - UI library
@@ -291,4 +204,4 @@ This is a demonstration project. Feel free to fork and customize!
 
 ---
 
-**Built with ❤️ for luxury perfume enthusiasts**
+**Built with ❤️ by Perfume Shop Team**
