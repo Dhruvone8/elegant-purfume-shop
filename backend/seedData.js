@@ -12,12 +12,11 @@ module.exports = [
     gender: "Unisex",
     images: [
       "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.8,
     reviewsCount: 127,
-    isNewArrival: true, // Fixed: Renamed from isNew
+    isNewArrival: true, 
     inStock: true
   },
   {
@@ -31,13 +30,12 @@ module.exports = [
     type: "Eau de Parfum",
     gender: "Women",
     images: [
-      "https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1640699174379-b0c91561dbea?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.9,
     reviewsCount: 203,
-    isNewArrival: false, // Fixed: Renamed from isNew
+    isNewArrival: false, 
     inStock: true
   },
   {
@@ -51,12 +49,11 @@ module.exports = [
     gender: "Men",
     images: [
       "https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1594582269653-27abfae87b77?auto=format&fit=crop&w=800&q=80"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.6,
     reviewsCount: 89,
-    isNewArrival: true, // Fixed: Renamed from isNew
+    isNewArrival: true, 
     inStock: true
   },
   {
@@ -70,12 +67,11 @@ module.exports = [
     gender: "Unisex",
     images: [
       "https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1588405765098-9f69188e99cd?auto=format&fit=crop&w=800&q=80"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.5,
     reviewsCount: 72,
-    isNewArrival: false, // Fixed: Renamed from isNew
+    isNewArrival: false, 
     inStock: true
   }
 ];

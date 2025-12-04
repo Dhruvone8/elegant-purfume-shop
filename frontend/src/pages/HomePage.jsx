@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import HeroBanner from '../components/HeroBanner';
 import ProductCard from '../components/ProductCard';
-import { Loader } from 'lucide-react';
+import { Loader, Truck, Shield, RotateCcw, Award, Sparkles, ArrowRight } from 'lucide-react';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -28,67 +29,204 @@ const HomePage = () => {
     <div className="bg-luxury-cream min-h-screen">
       <HeroBanner />
 
+      {/* Featured Collection Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-luxury-gold text-sm font-bold tracking-[0.2em] uppercase block mb-3">
-            Our Collection
-          </span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-[1px] w-16 bg-luxury-gold"></div>
+            <Sparkles className="text-luxury-gold" size={20} />
+            <span className="text-luxury-gold text-sm font-bold tracking-[0.2em] uppercase">
+              Our Collection
+            </span>
+            <Sparkles className="text-luxury-gold" size={20} />
+            <div className="h-[1px] w-16 bg-luxury-gold"></div>
+          </div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-luxury-black mb-6">
             Curated Fragrances
           </h2>
-          {/* Replaced the solid line with a subtle dot or just remove it */}
-          <div className="text-luxury-gold text-2xl mb-6">✦</div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Discover our handpicked selection of exquisite perfumes, each crafted to perfection to embody elegance and sophistication.
           </p>
         </div>
 
         {loading ? (
-          <div className="flex justify-center py-20"><Loader className="animate-spin text-luxury-gold" size={40} /></div>
-        ) : error ? (
-          <div className="text-center text-red-500 py-10">{error}</div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product._id} product={product} />
-            ))}
+          <div className="flex flex-col items-center justify-center py-20">
+            <Loader className="animate-spin text-luxury-gold mb-4" size={48} />
+            <p className="text-gray-600 font-medium">Loading our finest fragrances...</p>
           </div>
-        )}
+        ) : error ? (
+          <div className="text-center py-12 bg-red-50 border border-red-200 rounded-lg">
+            <p className="text-red-600 font-medium">{error}</p>
+          </div>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {products.slice(0, 8).map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
 
-        <div className="text-center mt-16">
-          <button className="border-2 border-luxury-black text-luxury-black px-10 py-3 font-bold tracking-widest hover:bg-luxury-black hover:text-white transition-all duration-300 uppercase text-sm">
-            View All Collections
-          </button>
-        </div>
+            <div className="text-center mt-16">
+              <Link to="/collections">
+                <button className="group inline-flex items-center gap-3 border-2 border-luxury-black text-luxury-black px-10 py-4 font-bold tracking-widest hover:bg-luxury-black hover:text-white transition-all duration-300 uppercase text-sm rounded-lg shadow-md hover:shadow-xl">
+                  View All Collections
+                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
       </section>
 
-      {/* Luxury Features Banner - UPDATED (No Lines) */}
-      <section className="bg-luxury-black text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Removed 'divide-y' and 'divide-gray-800' classes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-            <div className="p-4 group hover:-translate-y-2 transition-transform duration-500">
-              <div className="text-luxury-gold text-4xl mb-6 group-hover:scale-110 transition-transform">✦</div>
-              <h3 className="font-serif text-2xl text-white mb-4">Exquisite Scents</h3>
-              <p className="text-gray-400 text-sm leading-relaxed opacity-80">
+      {/* Luxury Features Banner */}
+      <section className="bg-luxury-black text-white py-24 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <div className="absolute w-96 h-96 bg-luxury-gold rounded-full blur-3xl top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-96 h-96 bg-luxury-gold rounded-full blur-3xl bottom-0 right-0 translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Why Choose ÉLÉGANCE</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Experience luxury redefined with our commitment to excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 text-center group hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl">
+              <div className="w-16 h-16 bg-luxury-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-luxury-gold/30 transition-all duration-300">
+                <Sparkles className="text-luxury-gold" size={32} />
+              </div>
+              <h3 className="font-serif text-xl text-white mb-4 font-bold">Exquisite Scents</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
                 Sourced from the rarest ingredients globally to ensure an unforgettable signature.
               </p>
             </div>
-            <div className="p-4 group hover:-translate-y-2 transition-transform duration-500">
-              <div className="text-luxury-gold text-4xl mb-6 group-hover:scale-110 transition-transform">✦</div>
-              <h3 className="font-serif text-2xl text-white mb-4">Long Lasting</h3>
-              <p className="text-gray-400 text-sm leading-relaxed opacity-80">
-                Formulated with high concentrations of perfume oils to stay with you from day to night.
+
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 text-center group hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl">
+              <div className="w-16 h-16 bg-luxury-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-luxury-gold/30 transition-all duration-300">
+                <Shield className="text-luxury-gold" size={32} />
+              </div>
+              <h3 className="font-serif text-xl text-white mb-4 font-bold">100% Authentic</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Genuine luxury fragrances with verified authenticity certificates.
               </p>
             </div>
-            <div className="p-4 group hover:-translate-y-2 transition-transform duration-500">
-              <div className="text-luxury-gold text-4xl mb-6 group-hover:scale-110 transition-transform">✦</div>
-              <h3 className="font-serif text-2xl text-white mb-4">Elegant Packaging</h3>
-              <p className="text-gray-400 text-sm leading-relaxed opacity-80">
-                A visual masterpiece in every bottle, designed to adorn your vanity with grace.
+
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 text-center group hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl">
+              <div className="w-16 h-16 bg-luxury-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-luxury-gold/30 transition-all duration-300">
+                <Award className="text-luxury-gold" size={32} />
+              </div>
+              <h3 className="font-serif text-xl text-white mb-4 font-bold">Long Lasting</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Formulated with high concentrations of perfume oils to stay with you all day.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 text-center group hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl">
+              <div className="w-16 h-16 bg-luxury-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-luxury-gold/30 transition-all duration-300">
+                <Truck className="text-luxury-gold" size={32} />
+              </div>
+              <h3 className="font-serif text-xl text-white mb-4 font-bold">Free Shipping</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Complimentary delivery on orders above ₹2000 across India.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+        <div className="bg-gradient-to-br from-luxury-black to-gray-900 rounded-2xl p-12 text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle, rgba(212,175,55,0.3) 1px, transparent 1px)',
+              backgroundSize: '30px 30px'
+            }}></div>
+          </div>
+          
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-serif text-4xl font-bold mb-6">Experience Luxury Shopping</h2>
+              <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+                Join thousands of satisfied customers who trust ÉLÉGANCE for their fragrance needs. 
+                We're committed to providing an exceptional shopping experience with every order.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-luxury-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Shield className="text-luxury-gold" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Secure Payments</h4>
+                    <p className="text-gray-400 text-sm">Multiple payment options with 100% secure checkout</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-luxury-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <RotateCcw className="text-luxury-gold" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Easy Returns</h4>
+                    <p className="text-gray-400 text-sm">30-day hassle-free return and exchange policy</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-luxury-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Award className="text-luxury-gold" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-1">Premium Quality</h4>
+                    <p className="text-gray-400 text-sm">Only authentic luxury fragrances from renowned brands</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" 
+                alt="Luxury Perfume"
+                className="rounded-lg shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-luxury-gold text-luxury-black p-6 rounded-lg shadow-2xl">
+                <p className="text-4xl font-bold mb-1">5000+</p>
+                <p className="text-sm font-medium">Happy Customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <Sparkles className="mx-auto mb-6 text-luxury-gold" size={40} />
+          <h2 className="font-serif text-4xl font-bold text-luxury-black mb-4">
+            Join Our Exclusive Club
+          </h2>
+          <p className="text-gray-600 mb-8 text-lg">
+            Subscribe to receive exclusive offers, new arrivals, and fragrance tips
+          </p>
+          <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              className="flex-1 px-6 py-4 border-2 border-gray-300 rounded-lg focus:border-luxury-gold focus:ring-2 focus:ring-luxury-gold/20 outline-none transition-all"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-luxury-black text-white px-8 py-4 font-bold tracking-wider hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 rounded-lg whitespace-nowrap"
+            >
+              SUBSCRIBE
+            </button>
+          </form>
+          <p className="text-gray-500 text-sm mt-4">
+            We respect your privacy. Unsubscribe anytime.
+          </p>
         </div>
       </section>
     </div>
