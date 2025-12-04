@@ -1,4 +1,4 @@
-# 🌟 Scent & Soul - Luxury Perfumes
+# 🌟 Elegant - Luxury Perfumes
 
 A full-stack luxury perfume e-commerce website built with React (Vite), Node.js, Express, and MongoDB.
 
