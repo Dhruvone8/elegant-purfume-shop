@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
           src={imgSrc}
           alt={product.name}
           onError={handleImageError}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-all duration-700"
         />
         
         {/* Gradient Overlay on Hover - Hidden on mobile */}

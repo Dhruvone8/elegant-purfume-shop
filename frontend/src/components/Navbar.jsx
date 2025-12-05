@@ -81,7 +81,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Overlay */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 animate-fade-in">
+          <div className="md:hidden fixed inset-0 top-0 bg-white z-40 space-y-8 flex flex-col items-center justify-center animate-fade-in">
             {['Home', 'Collections', 'About', 'Contact'].map((item) => (
               <Link
                 key={item}
@@ -94,7 +94,7 @@ const Navbar = () => {
             ))}
             
             {/* Mobile Icons */}
-            <div className="flex items-center gap-6 pt-8 border-t border-gray-200 w-48">
+            <div className="flex items-center gap-6 pt-8 border-t border-gray-200 w-32">
               <Search size={24} className="text-luxury-black hover:text-luxury-gold cursor-pointer transition-colors" />
               <User size={24} className="text-luxury-black hover:text-luxury-gold cursor-pointer transition-colors" />
               <div className="relative">
