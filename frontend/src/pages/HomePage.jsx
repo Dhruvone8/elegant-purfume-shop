@@ -241,9 +241,11 @@ const HomePage = () => {
                 alt="Luxury Perfume"
                 className="rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500"
               />
-              <div className="absolute -bottom-6 -right-4 md:bottom-4 md:-left-12 md:right-auto bg-luxury-gold text-luxury-black p-6 rounded-lg shadow-xl max-w-[200px]">
-                <p className="text-4xl font-bold mb-1">5000+</p>
-                <p className="text-sm font-bold uppercase tracking-wider">
+              
+              {/* Responsive Badge: Compact and unobtrusive on mobile */}
+              <div className="absolute -bottom-3 -right-2 sm:-bottom-6 sm:-right-4 md:bottom-4 md:-left-12 md:right-auto bg-luxury-gold text-luxury-black p-2 sm:p-6 rounded-lg shadow-xl max-w-[100px] sm:max-w-[200px] border border-white/20">
+                <p className="text-lg sm:text-4xl font-bold mb-0 leading-none">5000+</p>
+                <p className="text-[8px] sm:text-sm font-bold uppercase tracking-wider leading-tight mt-1">
                   Happy Customers
                 </p>
               </div>

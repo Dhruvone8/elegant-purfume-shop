@@ -10,9 +10,15 @@
   --luxury-gray: #2D2D2D;
 }
 
-@layer base {
-  * {
+* {
     scroll-behavior: smooth;
+}
+
+@layer base {
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%;
+    height: 100%;
   }
 
   body {
