@@ -23,8 +23,7 @@ const HeroBanner = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent h-32 bottom-0"></div>
       </div>
-
-      {/* Main Content */}
+      
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-3xl animate-fade-in">
           
