@@ -329,7 +329,7 @@ const ProductPage = () => {
                         className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 hover:bg-sky-50 rounded-lg transition-colors"
                       >
                         <Twitter size={18} className="text-sky-500" />
-                        <span className="text-sm font-medium">Twitter</span>
+                        <span className="text-sm font-medium">Twitter / X</span>
                       </button>
                       <button
                         onClick={() => handleShare('whatsapp')}
