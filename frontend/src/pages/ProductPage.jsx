@@ -125,7 +125,7 @@ const ProductPage = () => {
               <img 
                 src={product.images[activeImage]} 
                 alt={product.name} 
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-500"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80";
                 }}
