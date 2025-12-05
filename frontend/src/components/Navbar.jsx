@@ -24,9 +24,10 @@ const Navbar = () => {
   }, [location]);
 
   // Dynamic Classes based on Scroll State
+  // FIX: Replaced 'bg-transparent' with a gradient to remove the hard line separation
   const navBackground = scrolled 
     ? 'bg-white/95 backdrop-blur-md shadow-md py-4' 
-    : 'bg-transparent py-6';
+    : 'bg-gradient-to-b from-black/80 to-transparent py-8'; // Increased padding for better spacing
 
   const textColor = scrolled 
     ? 'text-luxury-black' 
@@ -41,7 +42,10 @@ const Navbar = () => {
   const forceScrolledStyle = !isHomePage;
 
   // Final classes to apply
-  const activeNavClass = (scrolled || forceScrolledStyle) ? 'bg-white/95 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6';
+  const activeNavClass = (scrolled || forceScrolledStyle) 
+    ? 'bg-white/95 backdrop-blur-md shadow-md py-4' 
+    : 'bg-gradient-to-b from-black/80 to-transparent py-8'; // Gradient fix applied here
+    
   const activeTextClass = (scrolled || forceScrolledStyle) ? 'text-luxury-black' : 'text-white';
   const activeIconClass = (scrolled || forceScrolledStyle) ? 'text-luxury-black' : 'text-white';
 

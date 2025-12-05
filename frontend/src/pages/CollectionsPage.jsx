@@ -36,7 +36,7 @@ const CollectionsPage = () => {
     fetchProducts();
   }, []);
 
-  // Apply Filters
+  // Applying Filters
   useEffect(() => {
     let filtered = [...products];
 
@@ -70,7 +70,6 @@ const CollectionsPage = () => {
         filtered.sort((a, b) => b.rating - a.rating);
         break;
       default:
-        // Featured - keep original order
         break;
     }
 

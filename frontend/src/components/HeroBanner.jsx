@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeroBanner = () => {
   return (
-    <div className="relative min-h-screen flex items-center bg-luxury-black overflow-hidden pt-16">
+    <div className="relative min-h-screen flex items-center bg-luxury-black overflow-hidden pt-20">
       
       {/* Animated Background Particles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -28,9 +28,9 @@ const HeroBanner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-3xl animate-fade-in">
           
-          <div className="flex items-center gap-4 mb-6 group">
+          <div className="flex items-center gap-4 mb-6 group ml-7">
             <div className="h-[2px] w-12 bg-luxury-gold transition-all duration-500 group-hover:w-20"></div>
-            <Sparkles className="text-luxury-gold w-4 h-4 animate-pulse" />
+            <Sparkles className="text-luxury-gold w-4 h-5 animate-pulse" />
             <span className="text-luxury-gold text-sm font-bold tracking-[0.2em] uppercase">
               New Collection 2025
             </span>
@@ -51,32 +51,11 @@ const HeroBanner = () => {
           
           <div className="flex flex-col sm:flex-row gap-6">
             <Link to="/collections">
-              <button className="bg-luxury-gold text-luxury-black px-10 py-4 font-bold tracking-wider hover:bg-white hover:shadow-2xl hover:shadow-luxury-gold/50 transition-all duration-300 flex items-center justify-center gap-3 group">
+              <button className="bg-luxury-gold mb-4 cursor-pointer text-luxury-black px-10 py-4 font-bold tracking-wider hover:bg-white hover:shadow-2xl hover:shadow-luxury-gold/50 transition-all duration-300 flex items-center justify-center gap-3 group">
                 <span>EXPLORE NOW</span>
                 <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
               </button>
             </Link>
-            <Link to="/collections">
-              <button className="px-10 py-4 font-bold tracking-wider text-white border-2 border-white/30 hover:border-luxury-gold hover:text-luxury-gold hover:bg-luxury-gold/10 transition-all duration-300">
-                VIEW COLLECTION
-              </button>
-            </Link>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 flex items-center gap-8 text-white/60 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
-              <span>100% Authentic</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
-              <span>Free Shipping</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-luxury-gold rounded-full"></div>
-              <span>30-Day Returns</span>
-            </div>
           </div>
         </div>
       </div>

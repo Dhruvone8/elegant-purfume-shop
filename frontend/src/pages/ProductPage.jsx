@@ -142,7 +142,7 @@ const ProductPage = () => {
               </div>
             </div>
 
-            {/* Thumbnail Grid - Only show if there are multiple images */}
+            {/* Thumbnail Grid - Only displayed if there are multiple images */}
             {product.images && product.images.length > 1 && (
               <div className="grid grid-cols-4 gap-4">
                 {product.images.map((img, idx) => (
