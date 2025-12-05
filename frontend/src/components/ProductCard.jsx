@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
         {/* Hover Overlay with Action Buttons */}
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
           <button 
-            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg"
+            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg cursor-pointer"
             onClick={(e) => { 
               e.stopPropagation(); 
               alert('Added to cart!'); 
@@ -64,8 +64,11 @@ const ProductCard = ({ product }) => {
             <ShoppingBag size={20} />
           </button>
           <button 
-            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg"
-            onClick={(e) => { e.stopPropagation(); }}
+            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg cursor-pointer"
+            onClick={(e) => { 
+              e.stopPropagation(); 
+              navigate(`/product/${product._id}`);
+            }}
           >
             <Eye size={20} />
           </button>
@@ -152,7 +155,7 @@ const ProductCard = ({ product }) => {
             e.stopPropagation();
             alert('Added to cart!');
           }}
-          className="w-full bg-luxury-black text-white py-2 px-4 font-bold text-sm tracking-wider hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+          className="w-full bg-luxury-black text-white py-2 px-4 font-bold text-sm tracking-wider hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 cursor-pointer"
         >
           QUICK ADD
         </button>
