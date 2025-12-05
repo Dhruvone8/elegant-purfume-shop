@@ -1,4 +1,3 @@
-// backend/seedData.js
 module.exports = [
   {
     name: "Midnight Oud",
@@ -12,6 +11,9 @@ module.exports = [
     gender: "Unisex",
     images: [
       "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80",
+      "https://tse3.mm.bing.net/th/id/OIP.zFvekA38BGiECHcIcCRjmQHaIh?cb=ucfimg2&ucfimg=1&w=900&h=1035&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://minispectra.co/wp-content/uploads/2022/07/OUD-Intense.jpg",
+      "https://setaracosmetics.it/cdn/shop/files/dunya-aqua-parfum-showcasing-surrounded-by-its-ingredients-like-tonka-sandalwood-cardamom..jpg?v=1702720797&width=1445"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.8,
@@ -31,6 +33,9 @@ module.exports = [
     gender: "Women",
     images: [
       "https://images.unsplash.com/photo-1640699174379-b0c91561dbea?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/premium-photo/bottle-perfume-with-red-rose-background_878882-4443.jpg",
+      "https://tse1.mm.bing.net/th/id/OIP.wX3Rr9nISV0C4mhH-39BwgHaHa?cb=ucfimg2&ucfimg=1&w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "https://images.squarespace-cdn.com/content/v1/5e5ef902d6694e266c4c0faf/813aac86-262c-4f9f-a98f-add9ac7a4be5/How+to+Sell+Perfume+in+a+Store.jpg?format=1000w"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.9,
@@ -48,7 +53,10 @@ module.exports = [
     type: "Eau de Toilette",
     gender: "Men",
     images: [
-      "https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=80",
+      "https://thumbs.dreamstime.com/b/luxury-citrus-perfume-bottle-lemon-slice-natural-elements-luxurious-fresh-surrounded-fruits-green-leaves-illuminated-354214068.jpg",
+      "https://thumbs.dreamstime.com/b/product-photography-luxury-fragrance-advertorial-bottle-perfume-lemon-branch-olive-background-327441950.jpg",
+      "https://i.pinimg.com/736x/f9/53/a6/f953a676a49b32f462c8ba72b86be471.jpg",
+      "https://img.freepik.com/premium-photo/citrus-perfume-with-lemon-blossom_1030899-7015.jpg"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.6,
@@ -67,6 +75,9 @@ module.exports = [
     gender: "Unisex",
     images: [
       "https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=800&q=80",
+      "https://img.freepik.com/premium-photo/ocean-breeze-perfume-bottle-floating-water_861748-13192.jpg",
+      "https://i.pinimg.com/736x/10/55/e2/1055e20c43af9424b8565732acd89b59.jpg",
+      "https://tse4.mm.bing.net/th/id/OIP.LzYkzGF2yEnEBtrGEsmkOQHaHa?cb=ucfimg2&ucfimg=1&w=550&h=550&rs=1&pid=ImgDetMain&o=7&rm=3"
     ],
     sizes: ["50ml", "100ml"],
     rating: 4.5,

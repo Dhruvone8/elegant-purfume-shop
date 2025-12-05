@@ -6,22 +6,9 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const [imgSrc, setImgSrc] = useState(product.images[0]);
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
 
   const handleImageError = () => {
     setImgSrc("https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80");
-  };
-
-  const handleMouseEnter = () => {
-    if (product.images.length > 1) {
-      setImageIndex(1);
-      setImgSrc(product.images[1]);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setImageIndex(0);
-    setImgSrc(product.images[0]);
   };
 
   const calculateDiscount = () => {
@@ -36,8 +23,6 @@ const ProductCard = ({ product }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product._id}`)}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       className="group relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 border border-gray-100 hover:border-luxury-gold/30"
     >
       {/* Image Section */}
