@@ -287,7 +287,7 @@ const ProductPage = () => {
             <div className="flex gap-4 mb-8">
               <button 
                 onClick={addToCart}
-                className="flex-1 bg-luxury-gold text-luxury-black py-4 font-bold text-lg hover:bg-luxury-darkGold transition-all duration-300 flex justify-center items-center gap-3 shadow-lg hover:shadow-xl rounded-lg"
+                className="flex-1 cursor-pointer bg-luxury-gold text-luxury-black py-4 font-bold text-lg hover:bg-luxury-darkGold transition-all duration-300 flex justify-center items-center hover:scale-103 gap-3 shadow-lg hover:shadow-xl rounded-lg"
               >
                 <ShoppingBag size={22} /> ADD TO CART
               </button>
