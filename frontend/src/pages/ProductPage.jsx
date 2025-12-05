@@ -249,7 +249,7 @@ const ProductPage = () => {
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`px-6 py-3 border-2 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`px-6 py-3 border-2 cursor-pointer rounded-lg font-semibold transition-all duration-300 ${
                       selectedSize === size 
                         ? 'bg-luxury-black text-white border-luxury-black shadow-lg scale-105' 
                         : 'bg-white text-gray-700 border-gray-300 hover:border-luxury-gold'
@@ -269,14 +269,14 @@ const ProductPage = () => {
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-12 h-12 border-2 border-gray-300 rounded-lg hover:border-luxury-gold transition-colors font-bold text-xl"
+                  className="w-12 h-12 border-2 cursor-pointer border-gray-300 rounded-lg hover:border-luxury-gold transition-colors font-bold text-xl"
                 >
                   -
                 </button>
                 <span className="text-2xl font-bold w-16 text-center">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-12 h-12 border-2 border-gray-300 rounded-lg hover:border-luxury-gold transition-colors font-bold text-xl"
+                  className="w-12 h-12 border-2 cursor-pointer border-gray-300 rounded-lg hover:border-luxury-gold transition-colors font-bold text-xl"
                 >
                   +
                 </button>
@@ -301,13 +301,13 @@ const ProductPage = () => {
               >
                 <Heart 
                   size={22} 
-                  className={isWishlisted ? 'fill-red-500 text-red-500' : 'text-gray-600'} 
+                  className={isWishlisted ? 'fill-red-500 text-red-500 cursor-pointer' : 'text-gray-600 cursor-pointer'} 
                 />
               </button>
               <div className="relative">
                 <button
                   onClick={() => setShowShareMenu(!showShareMenu)}
-                  className="w-16 h-full border-2 border-gray-300 hover:border-luxury-gold rounded-lg transition-all duration-300 flex items-center justify-center"
+                  className="w-16 cursor-pointer h-full border-2 border-gray-300 hover:border-luxury-gold rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
                   <Share2 size={22} className="text-gray-600" />
                 </button>
@@ -319,28 +319,28 @@ const ProductPage = () => {
                     <div className="space-y-2">
                       <button
                         onClick={() => handleShare('facebook')}
-                        className="w-full flex items-center gap-3 px-4 py-2 hover:bg-blue-50 rounded-lg transition-colors"
+                        className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 hover:bg-blue-50 rounded-lg transition-colors"
                       >
                         <Facebook size={18} className="text-blue-600" />
                         <span className="text-sm font-medium">Facebook</span>
                       </button>
                       <button
                         onClick={() => handleShare('twitter')}
-                        className="w-full flex items-center gap-3 px-4 py-2 hover:bg-sky-50 rounded-lg transition-colors"
+                        className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 hover:bg-sky-50 rounded-lg transition-colors"
                       >
                         <Twitter size={18} className="text-sky-500" />
                         <span className="text-sm font-medium">Twitter</span>
                       </button>
                       <button
                         onClick={() => handleShare('whatsapp')}
-                        className="w-full flex items-center gap-3 px-4 py-2 hover:bg-green-50 rounded-lg transition-colors"
+                        className="w-full flex cursor-pointer items-center gap-3 px-4 py-2 hover:bg-green-50 rounded-lg transition-colors"
                       >
                         <MessageCircle size={18} className="text-green-600" />
                         <span className="text-sm font-medium">WhatsApp</span>
                       </button>
                       <button
                         onClick={() => handleShare('copy')}
-                        className="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors"
+                        className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors"
                       >
                         <Share2 size={18} className="text-gray-600" />
                         <span className="text-sm font-medium">Copy Link</span>
@@ -458,7 +458,7 @@ const ProductPage = () => {
                 <button 
                   type="submit" 
                   disabled={submittingReview}
-                  className="w-full bg-luxury-black text-white font-bold py-4 rounded-lg hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                  className="w-full bg-luxury-black cursor-pointer text-white font-bold py-4 rounded-lg hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                 >
                   {submittingReview ? (
                     <span className="flex items-center justify-center gap-2">

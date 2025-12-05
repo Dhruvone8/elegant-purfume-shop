@@ -89,7 +89,7 @@ const CollectionsPage = () => {
   return (
     <div className="bg-luxury-cream min-h-screen pt-24 pb-16">
       {/* Header */}
-      <div className="bg-gradient-to-r from-luxury-black to-gray-900 text-white py-20 mb-12 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-gray-900 to-black text-white py-20 mb-12 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"

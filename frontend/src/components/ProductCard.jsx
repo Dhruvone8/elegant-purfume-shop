@@ -69,7 +69,7 @@ const ProductCard = ({ product }) => {
         >
           <Heart 
             size={18} 
-            className={`${isWishlisted ? 'fill-red-500 text-red-500' : 'text-gray-600'} transition-colors duration-300`}
+            className={`${isWishlisted ? 'fill-red-500 text-red-500 cursor-pointer' : 'text-gray-600 cursor-pointer'} transition-colors duration-300`}
           />
         </button>
 

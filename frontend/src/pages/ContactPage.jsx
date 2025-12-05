@@ -23,7 +23,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="text-luxury-gold shrink-0" />
-                  <p>+91 98765 43210</p>
+                  <p>+91 83697 49375</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="text-luxury-gold shrink-0" />

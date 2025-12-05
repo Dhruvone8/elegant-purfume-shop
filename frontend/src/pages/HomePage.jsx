@@ -167,7 +167,6 @@ const HomePage = () => {
 
       {/* Trust Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
-        {/* Changed background to standard gray-900/black to ensure white text is readable */}
         <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 md:p-12 text-white relative shadow-2xl">
           {/* Decorative background pattern */}
           <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden rounded-2xl">
@@ -240,10 +239,8 @@ const HomePage = () => {
               <img
                 src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80"
                 alt="Luxury Perfume"
-                className="rounded-lg shadow-2xl w-full object-cover transform hover:scale-[1.02] transition-transform duration-500"
+                className="rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500"
               />
-
-              {/* Fixed Badge Position: Moved inside to prevent clipping */}
               <div className="absolute -bottom-6 -right-4 md:bottom-4 md:-left-12 md:right-auto bg-luxury-gold text-luxury-black p-6 rounded-lg shadow-xl max-w-[200px]">
                 <p className="text-4xl font-bold mb-1">5000+</p>
                 <p className="text-sm font-bold uppercase tracking-wider">
