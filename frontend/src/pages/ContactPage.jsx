@@ -70,7 +70,7 @@ const ContactPage = () => {
                 <textarea rows="5" className="w-full bg-gray-50 border border-gray-200 p-3 focus:outline-none focus:border-luxury-gold transition-colors"></textarea>
               </div>
 
-              <button className="w-full bg-luxury-black text-white font-bold py-4 hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 uppercase tracking-widest">
+              <button className="w-full cursor-pointer bg-luxury-black text-white font-bold py-4 hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 uppercase tracking-widest">
                 Send Message
               </button>
             </form>
