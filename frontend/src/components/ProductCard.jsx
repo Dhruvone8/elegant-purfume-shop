@@ -31,13 +31,13 @@ const ProductCard = ({ product }) => {
           src={imgSrc}
           alt={product.name}
           onError={handleImageError}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700"
         />
         
         {/* Hover Overlay with Action Buttons - Desktop */}
         <div className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center gap-4 z-20">
           <button 
-            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg"
+            className="bg-white cursor-pointer text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg"
             onClick={(e) => { 
               e.stopPropagation(); 
               alert('Added to cart!'); 
@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
             <ShoppingBag size={20} />
           </button>
           <button 
-            className="bg-white text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg"
+            className="bg-white cursor-pointer text-luxury-black p-3 rounded-full hover:bg-luxury-gold hover:scale-110 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg"
             onClick={(e) => { 
               e.stopPropagation(); 
               navigate(`/product/${product._id}`);
@@ -120,7 +120,7 @@ const ProductCard = ({ product }) => {
               e.stopPropagation();
               alert('Added to cart!');
             }}
-            className="md:hidden w-full bg-luxury-black text-white py-2 text-xs font-bold tracking-wider rounded-sm active:bg-luxury-gold active:text-black transition-colors"
+            className="md:hidden cursor-pointer w-full bg-luxury-black text-white py-2 text-xs font-bold tracking-wider rounded-sm active:bg-luxury-gold active:text-black transition-colors"
           >
             ADD TO CART
           </button>
@@ -131,7 +131,7 @@ const ProductCard = ({ product }) => {
               e.stopPropagation();
               alert('Added to cart!');
             }}
-            className="hidden md:block w-full bg-luxury-black text-white py-2 font-bold text-sm tracking-wider hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 rounded-sm"
+            className="hidden cursor-pointer md:block w-full bg-luxury-black text-white py-2 font-bold text-sm tracking-wider hover:bg-luxury-gold hover:text-luxury-black transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 rounded-sm"
           >
             QUICK ADD
           </button>

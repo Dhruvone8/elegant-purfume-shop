@@ -51,7 +51,7 @@ const HeroBanner = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <Link to="/collections">
-              <button className="w-full sm:w-auto bg-luxury-gold cursor-pointer text-luxury-black px-8 py-3 md:px-10 md:py-4 font-bold tracking-wider hover:bg-white hover:shadow-2xl hover:shadow-luxury-gold/50 transition-all duration-300 flex items-center justify-center gap-3 group rounded-sm">
+              <button className="w-full mb-2 sm:w-auto bg-luxury-gold cursor-pointer text-luxury-black px-8 py-3 md:px-10 md:py-4 font-bold tracking-wider hover:bg-white hover:shadow-2xl hover:shadow-luxury-gold/50 transition-all duration-300 flex items-center justify-center gap-3 group rounded-sm">
                 <span>EXPLORE NOW</span>
                 <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
               </button>
